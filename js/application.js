@@ -77,13 +77,12 @@ $(document).ready(function(){
     }
     var typeInput = $('#typeSelect option:selected').val();
     var cityInput = $('#cityID').val().split(',');
-      for (i = 0; i < cityInput.length; i++) {
-        if        (typeInput === 'temp')     {chartTemp.run     (cityInput[i],'temp','Temperature','In Kelvin','chartTemp')}
-        else if   (typeInput === 'pressure') {chartPressure.run (cityInput[i],'pressure','Pressure','In bar','chartPressure')}
-        else if   (typeInput === 'humidity') {chartHumidity.run (cityInput[i],'humidity','Relative Humidity','In percentage','chartHumidity')}
-        else if   (typeInput === 'tempMin')  {chartTempMin.run  (cityInput[i],'temp_min','Minimum temperature','In Kelvin','chartTempMin')}
-        else if   (typeInput === 'tempMax')  {chartTempMax.run  (cityInput[i],'temp_max','Maximum temperature','In Kelvin','chartTempMax')}
-      }
+      if        (typeInput === 'temp')     {chartTemp.run     (cityInput,'temp','Temperature','In Kelvin','chartTemp')}
+      else if   (typeInput === 'pressure') {chartPressure.run (cityInput,'pressure','Pressure','In bar','chartPressure')}
+      else if   (typeInput === 'humidity') {chartHumidity.run (cityInput,'humidity','Relative Humidity','In percentage','chartHumidity')}
+      else if   (typeInput === 'tempMin')  {chartTempMin.run  (cityInput,'temp_min','Minimum temperature','In Kelvin','chartTempMin')}
+      else if   (typeInput === 'tempMax')  {chartTempMax.run  (cityInput,'temp_max','Maximum temperature','In Kelvin','chartTempMax')}
+
 
   })
 
