@@ -82,13 +82,5 @@ $(document).ready(function(){
       else if   (typeInput === 'humidity') {chartHumidity.run (cityInput,'humidity','Relative Humidity','In percentage','chartHumidity')}
       else if   (typeInput === 'tempMin')  {chartTempMin.run  (cityInput,'temp_min','Minimum temperature','In Kelvin','chartTempMin')}
       else if   (typeInput === 'tempMax')  {chartTempMax.run  (cityInput,'temp_max','Maximum temperature','In Kelvin','chartTempMax')}
-
-
   })
-
-
-  var $document = $(document),
-      $element = $('form');
-
-
 })
